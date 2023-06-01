@@ -1,0 +1,17 @@
+    {% extends 'dummy.html' %}
+    {% block title %}
+    <h1 style="color:azure"><title>registrations</title></h1>
+    {% endblock %}
+
+    {% block body_block %}
+    <center>
+        <h1 style="background-color: blue; color:aqua">registrations</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{UFD.as_p}}
+            {{PFD.as_p}}
+            <input type="submit" value="SUBMIT">
+        </form>
+    </center>
+    {% endblock %}
